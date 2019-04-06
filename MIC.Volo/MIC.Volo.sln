@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo.HW_FibFunc", "MIC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo_ToDoList", "MIC.Volo_ToDoList\MIC.Volo_ToDoList.csproj", "{7DCF40CD-DBD4-4F7E-B484-20DE58A6B799}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo_Convertor_Eng-Arm", "MIC.Volo_Convertor_Eng-Arm\MIC.Volo_Convertor_Eng-Arm.csproj", "{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7DCF40CD-DBD4-4F7E-B484-20DE58A6B799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DCF40CD-DBD4-4F7E-B484-20DE58A6B799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DCF40CD-DBD4-4F7E-B484-20DE58A6B799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
