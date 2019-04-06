@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MIC.Volo_Convertor_Eng_Arm
 {
+    public delegate string MyDel(string c);
     class MyConvertor
     {
         private class Letter
@@ -18,12 +19,12 @@ namespace MIC.Volo_Convertor_Eng_Arm
             }
 
             public string let { get; set; }
-            byte id { get; set; }
+            public byte id { get; set; }
 
 
         }
 
-        private IEnumerable<Letter> engLett = new Letter[]
+        private static IEnumerable<Letter> engLett = new Letter[]
         {
             new Letter("a",1),
             new Letter("b",2),
@@ -57,7 +58,7 @@ namespace MIC.Volo_Convertor_Eng_Arm
             new Letter("f",30)
 
         };
-        private IEnumerable<Letter> armLett = new Letter[]
+        private static IEnumerable<Letter> armLett = new Letter[]
         {
             new Letter("ա",1),
             new Letter("բ",2),
@@ -90,5 +91,25 @@ namespace MIC.Volo_Convertor_Eng_Arm
             new Letter("ֆ",30)
 
         };
+
+        public static string Convert(string s)
+        {
+            MyDel md = (string c) =>
+             {
+                 if(engLett.Where(x=>x.let == c) == null)
+                 {
+                     return c;
+                 }
+                 return  engLett.Where(x => x.let ==  c).Join(armLett, x => x.id, y => y.id, (x, y) => y.let).ToString();
+             };
+            string myst = null;
+            for (int i = 0; i < s.Length; i++)
+            {
+                myst += md(""+s[i]);
+            }
+            return myst.ToString();
+        }
+
+
     }
 }

@@ -61,7 +61,7 @@ namespace MIC.Volo_ToDoList
             }
 
             
-            myList.RemoveAll(x=>x.Valid);
+            myList.RemoveAll(x=>x.Checked);
 
         }
     }
