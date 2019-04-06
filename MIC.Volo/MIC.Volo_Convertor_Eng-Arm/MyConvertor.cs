@@ -14,11 +14,11 @@ namespace MIC.Volo_Convertor_Eng_Arm
         {
             public Letter(string let, byte id)
             {
-                this.let = let;
+                this.lett = let;
                 this.id = id;
             }
 
-            public string let { get; set; }
+            public string lett { get; set; }
             public byte id { get; set; }
 
 
@@ -96,13 +96,25 @@ namespace MIC.Volo_Convertor_Eng_Arm
         {
             MyDel md = (string c) =>
             {
-                if (engLett.Where(x => x.let == c) == null)
+                if (engLett.Where(x => x.lett == c) == null)
                 {
                     return c;
                 }
-                return engLett.Where(x => x.let == c).Join(armLett, x => x.id, y => y.id, (x, y) => y.let).ToString();
+                var str = (from x in engLett
+                              where x.lett == c
+                              select x into x1
+                              from y in armLett
+                              where x1.id == y.id
+                              select y);
+
+
+
+
+
+
+                return str.ElementAt(0).lett;
             };
-            string myst = null;
+            string myst = " ";
             for (int i = 0; i < s.Length; i++)
             {
                 myst += md("" + s[i]);
