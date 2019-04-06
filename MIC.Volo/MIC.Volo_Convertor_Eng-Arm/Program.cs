@@ -12,10 +12,6 @@ namespace MIC.Volo_Convertor_Eng_Arm
         {
 
         }
-        static void TestConvertor()
-        {
-            string s = Console.ReadLine();
-            Console.WriteLine(MyConvertor.Convert(s));
-        }
+        
     }
 }

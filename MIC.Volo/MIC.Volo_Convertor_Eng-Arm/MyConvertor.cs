@@ -95,17 +95,17 @@ namespace MIC.Volo_Convertor_Eng_Arm
         public static string Convert(string s)
         {
             MyDel md = (string c) =>
-             {
-                 if(engLett.Where(x=>x.let == c) == null)
-                 {
-                     return c;
-                 }
-                 return  engLett.Where(x => x.let ==  c).Join(armLett, x => x.id, y => y.id, (x, y) => y.let).ToString();
-             };
+            {
+                if (engLett.Where(x => x.let == c) == null)
+                {
+                    return c;
+                }
+                return engLett.Where(x => x.let == c).Join(armLett, x => x.id, y => y.id, (x, y) => y.let).ToString();
+            };
             string myst = null;
             for (int i = 0; i < s.Length; i++)
             {
-                myst += md(""+s[i]);
+                myst += md("" + s[i]);
             }
             return myst.ToString();
         }
