@@ -3,7 +3,7 @@ Hi!I am Mher and I start learn GitHub))
 This is my first repo and here you can find my Homeworks and other exercises that I did when I did my first steps))
 Heav a good jurnay
 
-[Fibonacci]( Fibonacci)
+[Fibonacci][Fibonacci1]
 
 [My_ToDoList](https://github.com/MherMelkonyan/MyFirstRepo/tree/master/MIC.Volo/MIC.Volo_Convertor_Eng-Arm)
 
