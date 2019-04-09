@@ -10,8 +10,17 @@ namespace MIC.Volo_HTMLtoFile
 {
     class MyWebClient
     {
+        public readonly WebClient web;
 
-       
+        public MyWebClient(string uri)
+        {
+            this.web = new WebClient();
+            this.uri = new Uri(uri);
+        }
+
+        public Uri uri { get; private set; }
+
+
 
     }
 }
