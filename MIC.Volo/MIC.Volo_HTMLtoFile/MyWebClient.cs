@@ -20,6 +20,10 @@ namespace MIC.Volo_HTMLtoFile
 
         public Uri uri { get; private set; }
 
+        public string Download()
+        {
+            return web.DownloadString(uri);
+        }
 
 
     }
