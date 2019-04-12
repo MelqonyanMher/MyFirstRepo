@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo_ToDoList", "MIC.Vo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo_Convertor_Eng-Arm", "MIC.Volo_Convertor_Eng-Arm\MIC.Volo_Convertor_Eng-Arm.csproj", "{D6EA1D47-CE5D-4BAE-B8F6-6CC50A07D2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo_HTMLtoFile", "MIC.Volo_HTMLtoFile\MIC.Volo_HTMLtoFile.csproj", "{BDEA8FDD-99D3-4EAE-8FE8-C508D599DA30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MIC.Volo_HTMLtoFile", "MIC.Volo_HTMLtoFile\MIC.Volo_HTMLtoFile.csproj", "{BDEA8FDD-99D3-4EAE-8FE8-C508D599DA30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mic.Volo.PrimeNumber", "Mic.Volo.PrimeNumber\Mic.Volo.PrimeNumber.csproj", "{1A736601-E3F5-48A1-B072-51F5F3133396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BDEA8FDD-99D3-4EAE-8FE8-C508D599DA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDEA8FDD-99D3-4EAE-8FE8-C508D599DA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDEA8FDD-99D3-4EAE-8FE8-C508D599DA30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A736601-E3F5-48A1-B072-51F5F3133396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A736601-E3F5-48A1-B072-51F5F3133396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A736601-E3F5-48A1-B072-51F5F3133396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A736601-E3F5-48A1-B072-51F5F3133396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
