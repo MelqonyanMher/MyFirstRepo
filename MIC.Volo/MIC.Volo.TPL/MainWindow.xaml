@@ -1,0 +1,16 @@
+﻿<Window x:Class="MIC.Volo.TPL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MIC.Volo.TPL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="TextURL" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <Button x:Name="ButtonDownload" Content="Download" HorizontalAlignment="Left" Margin="289,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="ButtonDownload_Click"/>
+        <TextBlock x:Name="TextOutput" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="200" Width="709" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <Button Content="Calculate" HorizontalAlignment="Left" Height="23" Margin="436,10,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click"/>
+
+    </Grid>
+</Window>
