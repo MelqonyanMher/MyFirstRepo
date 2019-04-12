@@ -76,7 +76,14 @@ namespace MIC.Volo_ToDoList
             return myList.Select(x => x.Value);
         }
 
-        
+        public IEnumerable<string> GetAll(bool b)
+        {
+            if (IsEmpty)
+            {
+                throw new NullReferenceException("List is Empty!");
+            }
+            return myList.Where(x => x.Completed == b).Select(x => x.Value);
+        }
 
     }
 }
