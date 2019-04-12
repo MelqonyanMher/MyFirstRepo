@@ -16,11 +16,13 @@ namespace MIC.Volo_ToDoList
             }
 
             public string Value { get; set; }
-            public bool Checked { get; set; } = false;
+            public bool Completed { get; set; } = false;
         }
 
         private List<MyToDo> myList;
+
         public bool IsEmpty => myList == null;
+
         public void Add(string s)
         {
             if (IsEmpty)
@@ -33,6 +35,7 @@ namespace MIC.Volo_ToDoList
                 myList.Add(new MyToDo(s));
             }
         }
+
         public void Remove(string s)
         {
             if (IsEmpty)
@@ -41,6 +44,7 @@ namespace MIC.Volo_ToDoList
             }
 
             MyToDo m = null;
+
             foreach (var item in myList)
             {
                 if (item.Value == s)
@@ -53,16 +57,26 @@ namespace MIC.Volo_ToDoList
             myList.Remove(m);
 
         }
+
         public void RemoveAll(bool b)
         {
             if (IsEmpty)
             {
                 throw new NullReferenceException("List is Empty!");
             }
-
-            
-            myList.RemoveAll(x=>x.Valid);
-
+            myList.RemoveAll(x=>x.Completed==b);
         }
+
+        public IEnumerable<string> GetAll()
+        {
+            if (IsEmpty)
+            {
+                throw new NullReferenceException("List is Empty!");
+            }
+            return myList.Select(x => x.Value);
+        }
+
+        
+
     }
 }
