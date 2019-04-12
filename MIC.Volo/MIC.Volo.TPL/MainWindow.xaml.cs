@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace MIC.Volo.TPL
 {
@@ -37,15 +39,12 @@ namespace MIC.Volo.TPL
                 {
                     var address = new Uri(TextURL.Text);
 
-                    //string result = client.DownloadString(address);
+                   
+                    SaveFileDialog save = new SaveFileDialog();
+                    save.ShowDialog();
 
-                    Task<string> downloadTask = client.DownloadStringTaskAsync(address);
-                
-                    TextOutput.Text = "Downloading...";
-
-                    string result = await downloadTask;
-
-                    TextOutput.Text = new string(result.Take(200).ToArray());
+                    client.DownloadFile(address, save.FileName);
+                    
                 }
                 catch (UriFormatException)
                 {
@@ -69,31 +68,6 @@ namespace MIC.Volo.TPL
                     ButtonDownload.IsEnabled = true;
                 }
             }
-        }
-
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            TextOutput.Text = "Calculating ...";
-
-            int n = 100000000;
-
-            double result = await CalculateAsync(n);
-
-            TextOutput.Text = result.ToString();
-        }
-
-        private async Task<double> CalculateAsync(int n)
-        {
-            Func<double> func = () =>
-            {
-                var result = Enumerable.Range(0, n).Select(i => Math.Sin(i)).Sum();
-
-                return result;
-            };
-
-            Task<double> task = Task.Factory.StartNew<double>(func);
-
-            return await task;
         }
     }
 }
