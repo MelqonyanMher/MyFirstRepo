@@ -34,29 +34,41 @@ namespace Mic.Volo.PrimeNumber
         {
             Func<int> myFunc = () =>
               {
-                  int temp = 1;
-                  int count = 1;
-
-                  while (count < n)
+                  if (n == 1) return 2;
+                  else if(n == 2) return 3;
+                  else if(n == 3) return 5;
+                  else
                   {
-                      bool b = true;
-                      temp++;
+                      int temp = 3;
+                      int count = 1;
 
-                      for (int i = 2; i < temp / 2; i++)
+                      while (count <= n)
                       {
-                          if (temp % i == 0)
+                          bool b = true;
+
+                          for (int i = 2; i < temp / 2; i++)
                           {
-                              b = false;
-                              break;
+                              if (temp % i == 0)
+                              {
+                                  b = false;
+                                  temp++;
+
+                                  break;
+                              }
+                          }
+                          if (b)
+                          {
+
+                              count++;
+                              if (count <= n)
+                              {
+                                  temp++;
+                              }
                           }
                       }
-                      if (b)
-                      {
-                          count++;
-                      }
-                  }
 
-                  return temp;
+                      return temp;
+                  }
               };
             Task<int> myTask = Task.Factory.StartNew<int>(myFunc);
             return await myTask;
