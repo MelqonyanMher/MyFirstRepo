@@ -3,7 +3,7 @@ Hi!I am Mher and I start learn GitHub))
 This is my first repo and here you can find my Homeworks and other exercises that I did when I did my first steps))
 Heav a good jurnay
 
-[TPL](#tpl)
+[Task Parallel Library](#tpl)
 
 [Prime num](#prime-numbers)
 
@@ -13,7 +13,55 @@ Heav a good jurnay
 
 ## TPL
 
+
+
+[TPL](https://github.com/MherMelkonyan/MyFirstRepo/tree/master/MIC.Volo/MIC.Volo.TPL)
+
 ## Prime Numbers
+
+```csharp
+public async Task<int> PrimeNumAsync(int n)
+{
+     Func<int> myFunc = () =>
+     {
+         if (n == 1) return 2;
+         else if(n == 2) return 3;
+         else if(n == 3) return 5;
+         else
+         {
+             int temp = 3;
+             int count = 1;
+
+             while (count <= n)
+             {
+                bool b = true;
+
+                for (int i = 2; i < temp / 2; i++)
+                {
+                     if (temp % i == 0)
+                     {
+                       b = false;
+                       temp++;
+                       break;
+                     }
+                }
+                if (b)
+                {
+                    count++;
+                    if (count <= n)
+                    {
+                        temp++;
+                    }
+                 }
+              }
+
+              return temp;
+          }
+      };
+      Task<int> myTask = Task.Factory.StartNew<int>(myFunc);
+      return await myTask;
+}
+```
 
 [Prime Num](https://github.com/MherMelkonyan/MyFirstRepo/tree/master/MIC.Volo/Mic.Volo.PrimeNumber)
 
