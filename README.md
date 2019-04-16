@@ -3,10 +3,19 @@ Hi!I am Mher and I start learn GitHub))
 This is my first repo and here you can find my Homeworks and other exercises that I did when I did my first steps))
 Heav a good jurnay
 
+[TPL](#tpl)
+
+[Prime num](#prime-numbers)
+
 [Fibonacci](#fibonacci)
 
 [MyToDoList](#my-to-do-list)
 
+##TPL
+
+##Prime Numbers
+
+[Prime Num](https://github.com/MherMelkonyan/MyFirstRepo/tree/master/MIC.Volo/Mic.Volo.PrimeNumber)
 
 ## Fibonacci
 
