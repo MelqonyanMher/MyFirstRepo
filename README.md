@@ -11,9 +11,9 @@ Heav a good jurnay
 
 [MyToDoList](#my-to-do-list)
 
-##TPL
+## TPL
 
-##Prime Numbers
+## Prime Numbers
 
 [Prime Num](https://github.com/MherMelkonyan/MyFirstRepo/tree/master/MIC.Volo/Mic.Volo.PrimeNumber)
 
