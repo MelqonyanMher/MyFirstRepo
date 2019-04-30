@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo.TPL", "MIC.Volo.TP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo.DBGenerator", "MIC.Volo.DBGenerator\MIC.Volo.DBGenerator.csproj", "{2666B387-BC9E-4396-A40B-5A7AE04F0CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIC.Volo.PFM.EFCore", "MIC.Volo.PFM.EFCore\MIC.Volo.PFM.EFCore.csproj", "{46FE206D-D97A-4D90-936B-4CB5822A4D42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{2666B387-BC9E-4396-A40B-5A7AE04F0CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2666B387-BC9E-4396-A40B-5A7AE04F0CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2666B387-BC9E-4396-A40B-5A7AE04F0CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46FE206D-D97A-4D90-936B-4CB5822A4D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FE206D-D97A-4D90-936B-4CB5822A4D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FE206D-D97A-4D90-936B-4CB5822A4D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FE206D-D97A-4D90-936B-4CB5822A4D42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
